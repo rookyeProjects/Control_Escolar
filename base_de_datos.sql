@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS control_usuarios;
-USE control_usuarios;
+CREATE DATABASE IF NOT EXISTS control_escolar;
+USE control_escolar;
 
 CREATE TABLE usuarios(
 idusuario INT(255) auto_increment not null,
