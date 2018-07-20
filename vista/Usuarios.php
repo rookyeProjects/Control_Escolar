@@ -23,21 +23,17 @@ require_once "../controlador/sessionUserTypeAdmin.php";
             <div id="mensaje-delete"></div>     
             <div class="col-lg-4"> <h1>Usuarios </h1></div>
             <div class="col-lg-4">  <a href="" data-toggle="modal" data-target="#myModal"  class="btn btn-success pull-right menu"><i class="fa fa-user-plus " aria-hidden="true"></i>&nbsp;Nuevo usuario</a></div>       
-            <div class="col-lg-4"> <a href="#" class="btn btn-info" onclick="loadUsers()"><i class="fa fa-refresh"></i>&nbsp;Refrescar</a></div>              
+            <div class="col-lg-4"> <a href="#" class="btn btn-info" onclick="loadUsersList()"><i class="fa fa-refresh"></i>&nbsp;Refrescar</a></div>         
+
+
+
                
             
         </div>
-        <div class="row">    
+        <div class="row">
 
-            <table id="example" class="table table-striped table-bordered table-responsive">
-            
-        </table>      
-            <div class="col-lg-10">
-                
-        </div>  
         </div>
-    </div>
-    <!-- END DATATABLE -->
+
 
     <!-- MODAL REGISTER -->
     <div class="modal fade in" id="myModal" >
@@ -143,5 +139,6 @@ require_once "../controlador/sessionUserTypeAdmin.php";
     <script src="assets/js/dataTables.bootstrap.min.js"></script>          
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/usuariojs.js"></script>
+    </div>
 </body>
 </html>

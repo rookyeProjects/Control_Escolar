@@ -5,9 +5,9 @@ x.ready(inicializarEventos);
 function inicializarEventos() {
     loadUsers();        
 }
-function loadUsers() {
+function loadUsersList() {
     $('#contenido').html("");
-    $.post("users.php", function(response) {        
+    $.post("usuarios.php", function(response) {        
         $('#contenido').html(response);
         $('#contenido').fadeIn();
     });

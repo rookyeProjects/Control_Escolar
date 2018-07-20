@@ -9,4 +9,7 @@ switch ($_SESSION['tipo']) {
 	case '3':
 		include('menu3.php');
 		break;
+	case '4':
+		include('menu4.php');
+		break;
 }

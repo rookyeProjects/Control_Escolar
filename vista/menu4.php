@@ -24,7 +24,7 @@ require_once "../controlador/sessionUserTypeClient2.php";
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Tutor</a> 
+                <a class="navbar-brand" href="#">Alumno</a> 
             </div>
             <div class="row-fluid">
                 <div class="row" style="float: left; margin: 0 0 0 25px;" >
@@ -44,25 +44,55 @@ require_once "../controlador/sessionUserTypeClient2.php";
                         <img src="assets/img/find_user.png" class="user-image img-responsive"/>
                     </li>
                     <li>
-                        <a  href="#"><i class="fa fa-dashboard fa-2x"></i> Alumnos</a>
+                        <a  href="#"><i class="fa fa-dashboard fa-2x"></i> Materias</a>
                     </li>
-                     
-                               
+                      <li>
+                        <a  href="#"><i class="fa fa-desktop fa-2x"></i> UI Elements</a>
+                    </li>
+                    <li>
+                        <a  href="#"><i class="fa fa-qrcode fa-2x"></i> Tabs & Panels</a>
+                    </li>
+                    <li  >
+                        <a  href="#"><i class="fa fa-bar-chart-o fa-2x"></i> Morris Charts</a>
+                    </li>   
+                      <li  >
+                        <a  href="#"><i class="fa fa-table fa-2x"></i> Table Examples</a>
+                    </li>
+                    <li  >
+                        <a  href="#"><i class="fa fa-edit fa-2x"></i> Forms </a>
+                    </li>               
                     
                                        
                     <li>
-                        <a href="#"><i class="fa fa-edit fa-2x"></i> Formatos<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-2x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Registro Tutorias</a>
+                                <a href="#">Second Level Link</a>
                             </li>
                             <li>
-                                <a href="#">Bitacora</a>
+                                <a href="#">Second Level Link</a>
                             </li>
-                             
+                            <li>
+                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+
+                                </ul>
+                               
+                            </li>
                         </ul>
                       </li>  
-                   
+                  <li  >
+                        <a class="active-menu"  href="blank.html"><i class="fa fa-square-o fa-2x"></i> Blank Page</a>
+                    </li>   
                 </ul>
                
             </div>

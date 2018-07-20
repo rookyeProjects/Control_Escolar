@@ -10,6 +10,7 @@ class usuarioBo {
         $this->dao=new usuarioDao();
     }
 
+
     function identificarUsuarioBo($usuario, $password) {
         $resultado = $this->dao->identificarUsuarioDao($usuario, $password);
         return $resultado;
@@ -21,11 +22,17 @@ class usuarioBo {
     }
 
     function traeUsuariosBo(){
-        $resultado = $this->dao->traeUsuariosDao();
+        $resultado = $this->dao->cargaUsuarios();
+        
         return $resultado;
     }
 
-    function actualizarUsuarioBo($usuario) {
+    function muestraListaUsuariosBo() {
+        $resultado = $this->dao->cargaUsuarios();
+        return $resultado;
+    }
+
+     function actualizarUsuarioBo($usuario) {
         $resultado = $this->dao->actualizarUsuarioDao($usuario);
         return $resultado;
     }

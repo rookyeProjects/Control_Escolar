@@ -6,15 +6,15 @@ class Notification {
 		if($result != false){
 		  $mensaje = '<div class="alert alert-dismissible alert-success">
 		              <button type="button" class="close" data-dismiss="alert">&times;</button>
-		              <strong>¡Ok!</strong> Registrado correctamente.
+		                Registrado correctamente.
 		            </div>';         
 		} else {
 		  $mensaje = '<div class="alert alert-dismissible alert-warning">
 		              <button type="button" class="close" data-dismiss="alert">&times;</button>
-		              <strong>¡Error!</strong> Inténtalo de nuevo.
+		                Inténtalo de nuevo.
 		            </div>';                    
 		}
-		return $mensaje;
+		return utf8_encode( $mensaje);
 	}   
 
 
@@ -22,62 +22,62 @@ class Notification {
     	if($result != false){
     	  $mensaje = '<div class="alert alert-dismissible alert-info">
     	              <button type="button" class="close" data-dismiss="alert">&times;</button>
-    	              <strong>¡Ok!</strong> Cambios guardados correctamente.
+    	                Cambios guardados correctamente.
     	            </div>';         
     	} else {
     	  $mensaje = '<div class="alert alert-dismissible alert-warning">
     	              <button type="button" class="close" data-dismiss="alert">&times;</button>
-    	              <strong>¡Error!</strong> Inténtalo de nuevo.
+    	                Inténtalo de nuevo.
     	            </div>';                    
     	}
-    	return $mensaje;
+    	return utf8_encode( $mensaje);
     }
 
      public function deletedRecord($result){
        	if($result != false){
 	        $mensaje = '<div class="alert alert-dismissible alert-success">
 	                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-	                    <strong>¡Ok!</strong> Registro eliminado correctamente.
+	                      Registro eliminado correctamente.
 	                  </div>';         
      	 } else {
 	        $mensaje = '<div class="alert alert-dismissible alert-warning">
 	                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-	                    <strong>¡Error!</strong> Inténtalo de nuevo.
+	                      Inténtalo de nuevo.
 	                  </div>';                    
       	}
-      	return $mensaje;
+      	return utf8_encode( $mensaje);
     }	
     
     public function existsUser(){
     	$mensaje = '<div class="alert alert-dismissible alert-danger">
     	            <button type="button" class="close" data-dismiss="alert">&times;</button>
-    	            <strong>!Parece que el usuario ya existe!</strong> Elige otro e intentalo de nuevo.
+    	            <strong>El usuario ya existe</strong> Elige otro e intentalo de nuevo.
     	          </div>';
-    	return $mensaje;
+    	return utf8_encode( $mensaje);
     }
 
     public function disableUser(){
     	$mensaje='<div class="alert alert-dismissible alert-info">
     	          <button type="button" class="close" data-dismiss="alert">&times;</button>
-    	          <strong>¡Opps!</strong> La cuenta de usuario esta inhabilitada.</a>
+    	           La cuenta de usuario esta inhabilitada.</a>
     	        </div>';
-    	return $mensaje;
+    	return utf8_encode( $mensaje);
     }
 
     public function incorrectCredentials() {
 		$mensaje='<div class="alert alert-dismissible alert-warning">
 		    	   <button type="button" class="close" data-dismiss="alert">&times;</button>
-		    	   <strong>Error!</strong> Usuario y/o clave incorrectos, intentalo de nuevo.
+		    	   Usuario y/o clave incorrectos, intentalo de nuevo.
 		    	  </div>';
-		return $mensaje;
+		return utf8_encode( $mensaje);
     }
 
     public function requiredFields() {
     	 $mensaje=' <div class="alert alert-dismissible alert-danger">
 			    	 <button type="button" class="close" data-dismiss="alert">&times;</button>
-			    	 <strong>¡ERROR!</strong> Completa todos los campos e intentalo de nuevo.</p>
+			    	   Completa todos los campos e intentalo de nuevo.</p>
 			    	</div>';
-		return $mensaje;
+		return utf8_encode( $mensaje);
     }
 }
 ?>

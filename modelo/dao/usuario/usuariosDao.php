@@ -121,35 +121,20 @@ class usuarioDao {
        return $result;
     }
 
-    function traeUsuariosDao() {
-
-      $data = "";
-      $st = "SELECT * FROM usuarios";
+    function cargaUsuarios()
+    {
+       $st = "SELECT * FROM usuarios";
+        $html=""; 
       $query= $this->con->query($st); 
 
-      while ($row =  mysqli_fetch_array($query) ) {
-      
-      $editar = '<a href=\"#\" data-toggle=\"modal\" data-target=\"#myModalActualiza\" id=\"'.$row['usuario'].'\" onclick=\"traeDatosUsuarioId(this)\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" class=\"btn btn-primary\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>';
-      $eliminar = '<a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" id=\"'.$row['usuario'].'\" onclick=\"delUsuario(this)\" class=\"btn btn-danger\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>';
-        
-        $data.='{
-              "id":"'.$row['idusuario'].'",
-              "paterno":"'.$row['apaterno'].'",
-              "materno":"'.$row['amaterno'].'",
-              "nombre":"'.$row['nombre'].'",
-              "usuario":"'.$row['usuario'].'",
-              "clave":"'.$row['clave'].'",
-              "tipo":"'.$row['tipo'].'",
-              "status":"'.$row['status'].'",
-              "fecha":"'.$row['fregistro'].'",
-              "acciones":"'.$editar.$eliminar.'"
-            },';
-    }
-        $data = substr($data,0, strlen($data) - 1);
-        $result =  '{"data":['.$data.']}';
+       while ($row =  mysqli_fetch_array($query) ) {
+       $html='<div class="row">'.$row['apaterno'].'</div>';
+       }
+       return  $html;
 
-        return $result;
+       
     }
+    
 
     function actualizarUsuarioDao($usuario) {
       $cad = "";
@@ -197,9 +182,10 @@ class usuarioDao {
                         <div class="form-group" id="campoTipo">
                             <select class="form-control" id="tipo" name="l">
                                 <option selected value="'.$row['tipo'].'">--Click para cambiar--</option>
-                                <option value="2">Cliente 1</option>
-                                <option value="3">Cliente 2</option>
-                                <option value="1">Administrador</option>                                        
+                                 <option value="1">Jefe de Carrera</option> 
+                                <option value="2">Coordinador Tutoria</option>
+                                <option value="3">Tutor</option>
+                                   <option value="4">Alumno</option>                                     
                             </select>                                    
                         </div>
                     </div> 
